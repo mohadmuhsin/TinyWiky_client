@@ -1,0 +1,28 @@
+<div class="container" >
+    <div class="login-container">
+        <h2>Login</h2>
+        <form [formGroup]="formData" (submit)="login()">
+            <input type="text" formControlName="email" class="login-input" placeholder="Email" required>
+            <div *ngIf="formData.get('email')?.hasError('email') && formData.get('email')?.touched"
+                class="warning">
+                Please enter a valid email address.
+            </div>
+            <div *ngIf="formData.get('email')?.hasError('required') && formData.get('email')?.touched"
+                class="warning">
+                Email is required.
+            </div>
+            <input type="password" formControlName="password" class="login-input" placeholder="Password" required>
+            <div *ngIf="formData.get('password')?.hasError('required') && formData.get('password')?.touched"
+                class="warning">
+                Password is required.
+            </div>
+            <div *ngIf="formData.get('password')?.hasError('minlength') && formData.get('password')?.touched"
+                class="warning">
+                Password must be at least 6 characters long.
+            </div>
+            <p *ngIf="validate" class="warning text-sm text-red-500">{{ validate }}</p>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+
+</div>

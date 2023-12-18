@@ -1,0 +1,34 @@
+
+<div id="container">
+    <div id="outer">
+        <div id="searchBar">
+            <h2 style=" font-weight: 700; margin: 7px;">What are you looking for?</h2>
+            <div id="input">
+                <input id="bar" placeholder="Type something..." type="text" [(ngModel)]="searchText" (keyup.enter)="search()">
+                <span (click)="search()" class="material-symbols-outlined">
+                    search
+                    </span>
+            </div>
+            <!-- <h2 *ngIf="loading" id="loading">loading...</h2> -->
+            <div *ngIf="loading" id="loader">
+                <div id="shadow"></div>
+                <div id="box"></div>
+              </div>
+            <div class="content">
+                <div class="suggetions-container" *ngFor="let item of data ">
+                    <div [routerLink]="['/wiki',item.title]"  id="suggetions">
+                        <h4 class="title">{{item.title}}</h4>
+                        <div id="deatils" [innerHTML]="sanitizeHtml(item.snippet)"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- <button id="searchButton">Search</button> -->

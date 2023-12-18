@@ -1,0 +1,23 @@
+.charts{
+    margin:15px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.pie{
+  width: 49.5%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding-bottom: 10px;
+  border-radius: 5px; 
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 889px) {
+  .charts {
+      display: block;
+  }
+  .pie {
+      margin-bottom: 20px;
+      width: 100%;
+  }
+}

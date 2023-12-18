@@ -1,0 +1,8 @@
+
+<h2 style="padding-left: 20px; margin: 0; padding-top: 70px; ">Dashboard </h2>
+<div class="charts mt-8"> 
+    <div *ngIf="history.length>0" class="pie shadow shadow-md mr-2 border border-sm rounded" [chart]="pieChart">
+    </div>
+    <div *ngIf="pages.length>0" class="pie shadow shadow-md mr-2 border border-sm rounded" [chart]="donutChart">
+    </div>
+  </div>

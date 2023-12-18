@@ -1,0 +1,156 @@
+#navbar{
+    
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#outer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+
+#bar{
+    width: 500px;
+    height: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+#bar:focus {
+    border: none; 
+}
+
+
+
+
+.content{
+    margin-top: 5px;
+    height: 400px;
+    overflow-y: auto;
+}
+#suggetions{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(129, 129, 129, 0.3);
+    width: 530px;
+    padding: 15px; 
+    cursor: pointer;
+
+}
+#suggetions:hover{
+    background-color: #94bfeb;
+}
+.title{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+}
+#deatils{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 450px; 
+}
+
+#loading{
+    padding-top: 2px;
+}
+
+#input{
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  font-size: 25px;
+  border-bottom-right-radius: 5px;
+  padding-right: 10px;
+}
+
+.material-symbols-outlined:hover{
+    color: #94bfeb;
+}
+
+
+
+
+    #loader {
+    /* Uncomment this to make it run! */
+    /*
+       animation: loader 5s linear infinite; 
+    */
+    
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+  }
+  @keyframes loader {
+    0% { left: -100px }
+    100% { left: 110%; }
+  }
+  #box {
+    width: 50px;
+    height: 50px;
+    background: #004080;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+  }
+  @keyframes animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% {
+      transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+      border-bottom-right-radius: 40px;
+    }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+  } 
+  #shadow { 
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+  }
+  @keyframes shadow {
+    50% {
+      transform: scale(1.2,1);
+    }
+  }
+  

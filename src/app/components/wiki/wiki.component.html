@@ -1,0 +1,5 @@
+<div *ngIf="!htmlContent" id="loader">
+    <div id="shadow"></div>
+    <div id="box"></div>
+  </div>
+<div id="deatils" *ngIf="htmlContent" [innerHTML]="sanitizeHtml(htmlContent.htmlContent)"></div>
